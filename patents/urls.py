@@ -1,6 +1,8 @@
 from django.urls import path
-from . import views
-app_name = 'patents'
+from patents.views import Patients
+from patents.views import patientshtml
+
 urlpatterns = [
-    path('patents/', views.Patients, name='Patients'),
+    path('patents/',Patients, name='Patients'),
+    path('patients/',patientshtml, name ='patients-html')
 ]
